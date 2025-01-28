@@ -14,10 +14,11 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::firstOrcreate([
-            'name' => 'Admin',
+        User::updateOrCreate([
             'email' => 'admin@admin',
-            'password' => '123@AdminPassword',
+        ],[
+            'name' => 'Admin',            
+            'password' => 'admin',
             'email_verified_at' => Carbon::now(),
         ]);
     }
