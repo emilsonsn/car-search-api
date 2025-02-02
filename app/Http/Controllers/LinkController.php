@@ -10,7 +10,7 @@ class LinkController extends Controller
     public function index() {
         return response()->json([
             'status' => true,
-            'data' => Link::orderBy("id", "desc")->get()
+            'data' => Link::orderBy("id", "asc")->get()
         ]);
     }
 
